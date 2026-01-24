@@ -10,7 +10,7 @@ EVENT_INFO = {
     "time": "9:00 AM - 5:00 PM IST",
     "venue": "To Be Announced, Mumbai",
     "description": "WiDS Mumbai is a flagship location for the WiDS India Conference 2026, alongside Delhi and Bangalore. Representing the Western Region, we bring together Ambassadors from Mumbai, Pune, and Surat.",
-    "registration_link": "https://forms.google.com/your-form-link", 
+    "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSeg45Skd91dYkGdhle1ycfzV8a3-1xFl-VZlEnKddA4tmIDJw/viewform", 
     "contact_email": "wids.mumbai@example.com"
 }
 
