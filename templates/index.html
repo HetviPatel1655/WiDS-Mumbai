@@ -3,83 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiDS Mumbai {{ info.year }}</title>
-    <!-- Tailwind CSS (No installation needed) -->
+    <title>WiDS Mumbai {{ info.year }} | WiDS India Conference</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .gradient-text {
-            background: linear-gradient(to right, #9333ea, #db2777);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    <!-- Custom WiDS Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wids: {
+                            purple: '#301934',  /* Dark Purple from WiDS Worldwide */
+                            light: '#7F529F',   /* Lighter Purple */
+                            gold: '#F8B000',    /* Gold Accent */
+                            gray: '#F3F4F6'
+                        }
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans">
+<body class="bg-white text-slate-800 font-sans">
 
     <!-- NAVIGATION -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <nav class="sticky top-0 w-full z-50 bg-white border-b border-gray-100 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <!-- LOGO PLACEHOLDER -->
-                <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">W</div>
-                <span class="text-xl font-bold text-slate-900">WiDS <span class="text-purple-600">Mumbai</span></span>
+            <!-- Brand -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-wids-purple text-wids-gold rounded-md flex items-center justify-center font-bold text-xl">W</div>
+                <div class="leading-tight">
+                    <div class="font-bold text-wids-purple text-lg">WiDS Mumbai</div>
+                    <div class="text-xs text-slate-500 font-medium tracking-wide">INDIA CONFERENCE</div>
+                </div>
             </div>
-            <div class="hidden md:flex gap-8 items-center">
-                <a href="#about" class="hover:text-purple-600 font-medium">About</a>
-                <a href="#speakers" class="hover:text-purple-600 font-medium">Speakers</a>
-                <a href="#agenda" class="hover:text-purple-600 font-medium">Agenda</a>
-                <a href="{{ info.registration_link }}" class="px-5 py-2 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition">Register Now</a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 items-center text-sm font-semibold text-slate-600">
+                <a href="#" class="hover:text-wids-purple transition">Home</a>
+                <a href="#about" class="hover:text-wids-purple transition">About WiDS</a>
+                <a href="#speakers" class="hover:text-wids-purple transition">Speakers</a>
+                <a href="#team" class="hover:text-wids-purple transition">Organizing Team</a>
+                <a href="#contact" class="hover:text-wids-purple transition">Contact Us</a>
+                
+                <!-- CTA Button -->
+                <a href="{{ info.registration_link }}" class="px-5 py-2.5 bg-wids-purple text-white rounded-md hover:bg-opacity-90 transition shadow-md">
+                    Register Now
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="relative pt-32 pb-20 overflow-hidden">
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <span class="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-700 text-sm font-bold mb-4 tracking-wide">WOMEN IN DATA SCIENCE</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-slate-900">
-                WiDS Mumbai <span class="gradient-text">{{ info.year }}</span>
+    <section class="relative bg-wids-purple text-white py-24 overflow-hidden">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-wids-gold opacity-10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-block px-4 py-1 border border-wids-gold text-wids-gold text-xs font-bold tracking-widest uppercase mb-6 rounded-full">
+                Western Region Chapter
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                WiDS India Conference <span class="text-wids-gold">Mumbai</span>
             </h1>
-            <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-                Elevating women in the field of data science. Join us for an inspiring day of technical talks, networking, and growth.
+            <p class="text-xl md:text-2xl text-purple-200 mb-10 max-w-3xl mx-auto font-light">
+                One of three flagship cities hosting WiDS India 2026.
             </p>
             
-            <div class="flex justify-center gap-4 mb-10 text-slate-600">
-                <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border">
-                    <i data-lucide="calendar" class="w-5 h-5 text-purple-600"></i> {{ info.date }}
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+                <div class="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
+                    <i data-lucide="calendar" class="w-5 h-5 text-wids-gold"></i> 
+                    <span class="font-medium">{{ info.date }}</span>
                 </div>
-                <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border">
-                    <i data-lucide="map-pin" class="w-5 h-5 text-purple-600"></i> {{ info.venue }}
+                <div class="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-wids-gold"></i> 
+                    <span class="font-medium">{{ info.venue }}</span>
                 </div>
             </div>
 
-            <a href="{{ info.registration_link }}" class="inline-block px-8 py-4 bg-purple-600 text-white text-lg font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition transform">
-                Reserve Your Spot
+            <a href="{{ info.registration_link }}" class="inline-flex items-center gap-2 px-8 py-4 bg-wids-gold text-wids-purple font-bold text-lg rounded-md hover:bg-yellow-400 transition transform hover:-translate-y-1 shadow-lg">
+                Register for Conference <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
         </div>
     </section>
 
-    <!-- SPEAKERS SECTION (Dynamic from Python) -->
-    <section id="speakers" class="py-20 bg-white">
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-wids-purple mb-6">About the Conference</h2>
+                <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                    {{ info.description }}
+                </p>
+                <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                    The WiDS India Conference is a collaborative effort held across <strong class="text-wids-purple">Mumbai, Delhi, and Bangalore</strong>. As the representative for the Western Region, the Mumbai chapter unites data science leaders from Mumbai, Pune, and Surat to showcase outstanding work by women in the field.
+                </p>
+                <div class="flex gap-4 mt-8">
+                    <div class="px-4 py-2 bg-purple-50 rounded border-l-4 border-wids-purple">
+                        <span class="block font-bold text-wids-purple text-xl">3</span>
+                        <span class="text-sm text-slate-600">Cities</span>
+                    </div>
+                    <div class="px-4 py-2 bg-purple-50 rounded border-l-4 border-wids-purple">
+                        <span class="block font-bold text-wids-purple text-xl">1</span>
+                        <span class="text-sm text-slate-600">Mission</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <!-- Decorative Image Placeholder -->
+                <div class="aspect-video bg-slate-100 rounded-xl overflow-hidden shadow-2xl relative">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="WiDS Audience" class="object-cover w-full h-full">
+                    <div class="absolute inset-0 bg-wids-purple/20 mix-blend-multiply"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKERS SECTION -->
+    <section id="speakers" class="py-20 bg-slate-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Speakers</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-wids-purple mb-4">Featured Speakers</h2>
+                <div class="w-24 h-1 bg-wids-gold mx-auto"></div>
+            </div>
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {% for speaker in speakers %}
-                <div class="group bg-slate-50 rounded-xl overflow-hidden hover:shadow-xl transition border border-slate-100">
-                    <div class="h-64 bg-slate-200 overflow-hidden">
-                        <!-- We use a placeholder if image doesn't exist, otherwise use static folder -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-64 overflow-hidden bg-slate-200 relative">
                         <img src="{{ url_for('static', filename=speaker.image) }}" 
                              alt="{{ speaker.name }}" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                             onerror="this.src='https://ui-avatars.com/api/?name={{ speaker.name }}&background=random'">
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://ui-avatars.com/api/?name={{ speaker.name }}&background=0D8ABC&color=fff'">
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-1">{{ speaker.name }}</h3>
-                        <p class="text-purple-600 text-sm font-semibold mb-2">{{ speaker.title }}</p>
-                        <p class="text-slate-500 text-sm">{{ speaker.topic }}</p>
+                    <div class="p-6 border-t-4 border-wids-gold">
+                        <h3 class="font-bold text-lg text-slate-900">{{ speaker.name }}</h3>
+                        <p class="text-wids-purple font-medium text-sm mb-2">{{ speaker.title }}</p>
+                        <p class="text-slate-500 text-xs uppercase tracking-wide">{{ speaker.topic }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -87,26 +151,108 @@
         </div>
     </section>
 
-    <!-- AGENDA SECTION (Dynamic from Python) -->
-    <section id="agenda" class="py-20 bg-slate-50">
+    <!-- AGENDA SUGGESTION -->
+    <section id="agenda" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-12">Agenda</h2>
-            <div class="space-y-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-wids-purple mb-4">Conference Agenda</h2>
+                <p class="text-slate-500">March 14, 2026</p>
+            </div>
+            
+            <div class="space-y-0 relative border-l-2 border-slate-200 ml-3 md:ml-0">
                 {% for item in agenda %}
-                <div class="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-sm border-l-4 border-purple-500 hover:shadow-md transition">
-                    <div class="md:w-32 font-bold text-purple-700 mb-2 md:mb-0">{{ item.time }}</div>
-                    <div class="font-medium text-slate-700">{{ item.event }}</div>
+                <div class="relative pl-8 pb-12 md:pl-0 md:pb-12 md:grid md:grid-cols-5 items-center group">
+                    <!-- Dot -->
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-wids-gold border-4 border-white md:left-auto md:right-auto md:col-start-2 md:col-end-3 md:mx-auto md:relative md:w-5 md:h-5 md:border-4"></div>
+                    
+                    <!-- Time -->
+                    <div class="md:col-span-1 md:text-right md:pr-10 font-bold text-wids-purple text-lg md:text-xl">{{ item.time }}</div>
+                    
+                    <!-- Content -->
+                    <div class="md:col-span-3 md:pl-10">
+                        <div class="bg-slate-50 p-5 rounded-lg border border-slate-100 group-hover:border-wids-light/30 group-hover:shadow-md transition">
+                            <h4 class="font-bold text-slate-800">{{ item.event }}</h4>
+                        </div>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-10 text-center">
-        <p class="mb-2 text-white font-bold">WiDS Mumbai {{ info.year }}</p>
-        <p class="text-sm">Independently organized WiDS event.</p>
-        <a href="mailto:{{ info.contact_email }}" class="inline-block mt-4 hover:text-white transition">Contact Us</a>
+    <!-- ORGANIZING TEAM -->
+    <section id="team" class="py-20 bg-wids-purple text-white relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Organizing Team</h2>
+                <p class="text-purple-200 max-w-2xl mx-auto">
+                    A collaborative effort by Ambassadors from the Western Region.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {% for member in team %}
+                <div class="text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-wids-gold/50">
+                        <img src="{{ url_for('static', filename=member.image) }}" 
+                             alt="{{ member.name }}"
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://ui-avatars.com/api/?name={{ member.name }}&background=random'">
+                    </div>
+                    <h4 class="font-bold text-lg">{{ member.name }}</h4>
+                    <p class="text-wids-gold text-sm">{{ member.role }}</p>
+                    <div class="inline-block mt-2 px-3 py-1 bg-white/10 rounded-full text-xs text-purple-200 border border-white/10">
+                        {{ member.city }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <footer id="contact" class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-white font-bold text-xl">
+                        <div class="w-8 h-8 bg-wids-purple text-wids-gold rounded flex items-center justify-center">W</div>
+                        WiDS Mumbai
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        WiDS Mumbai is independently organized by the Mumbai Ambassadors to coincide with the annual Global Women in Data Science (WiDS) Conference.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-wids-gold transition">About WiDS</a></li>
+                        <li><a href="#speakers" class="hover:text-wids-gold transition">Speakers</a></li>
+                        <li><a href="#team" class="hover:text-wids-gold transition">Team</a></li>
+                        <li><a href="{{ info.registration_link }}" class="hover:text-wids-gold transition">Register</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Us</h4>
+                    <div class="flex items-center gap-3 mb-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-wids-gold"></i>
+                        <a href="mailto:{{ info.contact_email }}" class="hover:text-white">{{ info.contact_email }}</a>
+                    </div>
+                    <div class="flex gap-4 mt-6">
+                        <!-- Social Icons -->
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-wids-purple hover:text-white transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-wids-purple hover:text-white transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs">
+                &copy; {{ info.year }} WiDS Mumbai. All Rights Reserved.
+            </div>
+        </div>
     </footer>
 
     <!-- Initialize Icons -->
