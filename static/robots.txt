@@ -11,4 +11,4 @@ Disallow: /private/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://widswesternregion.vercel.app/sitemap.xml
+Sitemap: https://wids-mumbai.vercel.app/sitemap.xml
