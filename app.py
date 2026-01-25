@@ -53,7 +53,7 @@ TEAM = [
         "name": "Prof.(Dr.)Pariza Kamboj", 
         "role": "Professor at Sarvajanik College of Engineering and Technology(SCET), Surat", 
         "city": "Surat", 
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Pariza%20Kamboj.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Pariza%20Kamboj.jfif",
         "email": "pariza.kamboj@scet.ac.in",
         "linkedin": "https://www.linkedin.com/in/prof-dr-pariza-kamboj-37617616/"
     },
