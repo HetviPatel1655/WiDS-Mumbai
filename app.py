@@ -17,10 +17,46 @@ EVENT_INFO = {
 # Add your team members here. 
 # You can add as many as you want.
 TEAM = [
-    {"name": "Ambassador Name 1", "role": "Lead Ambassador", "city": "Mumbai", "image": "team1.jpg"},
-    {"name": "Ambassador Name 2", "role": "Co-Organizer", "city": "Pune", "image": "team2.jpg"},
-    {"name": "Ambassador Name 3", "role": "Co-Organizer", "city": "Surat", "image": "team3.jpg"},
-    {"name": "Ambassador Name 4", "role": "Program Chair", "city": "Mumbai", "image": "team4.jpg"},
+    {
+        "name": "Hetvi Patel", 
+        "role": "Final Year CSE Student at SCET Surat", 
+        "city": "Surat", 
+        "image": "Hetvi Patel.png",
+        "email": "hetvi1655@example.com",
+        "linkedin": "https://www.linkedin.com/in/hetvi-patel-5a6467275/"
+    },
+    {
+        "name": "Shradhha Joshi", 
+        "role": "Co-Founder & Head Of Marketing at The Kquanta Research ", 
+        "city": "Mumbai", 
+        "image": "Shraddha Joshi.jpeg",
+        "email": "Shraddha.joshi@kquantaresearch.com",
+        "linkedin": "https://www.linkedin.com/in/shraddha-joshi-14285461/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    {
+        "name": "Anita Nandi-Ray", 
+        "role": "Co-founder & Policy Director at The Kquanta Research", 
+        "city": "Mumbai", 
+        "image": "Anita Nandi.jpeg",
+        "email": "Anita.nandi-ray@kquantaresearch.com",
+        "linkedin": "https://www.linkedin.com/in/anitanandi/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    {
+        "name": "Ambassador Name 4", 
+        "role": "Program Chair", 
+        "city": "Mumbai", 
+        "image": "team4.jpg",
+        "email": "ambassador4@example.com",
+        "linkedin": "https://linkedin.com/in/ambassador4"
+    },
+    {
+        "name": "Ambassador Name 5", 
+        "role": "Communications Lead", 
+        "city": "Pune", 
+        "image": "team5.jpg",
+        "email": "ambassador5@example.com",
+        "linkedin": "https://linkedin.com/in/ambassador5"
+    },
 ]
 
 SPEAKERS = [
@@ -39,10 +75,22 @@ SPEAKERS = [
 ]
 
 AGENDA = [
-    {"time": "09:00 AM", "event": "Registration & Networking"},
-    {"time": "10:00 AM", "event": "Welcome Note: WiDS India Western Region"},
-    {"time": "10:30 AM", "event": "Keynote Speech"},
-    {"time": "01:00 PM", "event": "Lunch Break"},
+    {"time": "9:15 AM", "event": "Welcome & Opening Remarks", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "9:00 - 9:30 AM", "event": "Opening Remarks", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "9:30 - 10:00 AM", "event": "Technology Vision Talks 1", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "10:00 - 10:30 AM", "event": "Technology Vision Talks 2", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "10:30 - 11:00 AM", "event": "Technology Vision Talks 3", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "11:00 - 11:30 AM", "event": "Break", "speaker": "", "designation": ""},
+    {"time": "11:30 - 12:00 PM", "event": "Technology Vision Talks 4", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "12:00 - 12:30 PM", "event": "Technology Vision Talks 5", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "12:30 - 1:00 PM", "event": "Technology Vision Talks 6", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "1:00 - 2:00 PM", "event": "Lunch Break", "speaker": "", "designation": ""},
+    {"time": "2:00 - 3:00 PM", "event": "Panel Discussion - Is AI making us better or just faster?", "speaker": "[Speaker 1], [Speaker 2], [Speaker 3]", "designation": "[Designations]"},
+    {"time": "3:00 - 3:30 PM", "event": "Technology Vision Talks 7", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "3:30 - 4:00 PM", "event": "Break", "speaker": "", "designation": ""},
+    {"time": "4:00 - 4:30 PM", "event": "Technology Vision Talks 8", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "4:30 - 5:00 PM", "event": "Closing Remarks", "speaker": "[Speaker Name]", "designation": "[Designation]"},
+    {"time": "5:00 - 5:15 PM", "event": "Group Photo and Tea", "speaker": "", "designation": ""},
 ]
 
 # -----------------------------------------
