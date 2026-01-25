@@ -21,7 +21,7 @@ TEAM = [
         "name": "Hetvi Patel", 
         "role": "Final Year CSE Student at SCET Surat", 
         "city": "Surat", 
-        "image": "Hetvi Patel.png",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Hetvi%20Patel.png",
         "email": "hetvi1655@example.com",
         "linkedin": "https://www.linkedin.com/in/hetvi-patel-5a6467275/"
     },
@@ -29,7 +29,7 @@ TEAM = [
         "name": "Shradhha Joshi", 
         "role": "Co-Founder & Head Of Marketing at The Kquanta Research ", 
         "city": "Mumbai", 
-        "image": "Shraddha Joshi.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Shraddha%20Joshi.jpeg",
         "email": "Shraddha.joshi@kquantaresearch.com",
         "linkedin": "https://www.linkedin.com/in/shraddha-joshi-14285461/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
@@ -37,25 +37,25 @@ TEAM = [
         "name": "Anita Nandi-Ray", 
         "role": "Co-founder & Policy Director at The Kquanta Research", 
         "city": "Mumbai", 
-        "image": "Anita Nandi.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Anita%20Nandi.jpeg",
         "email": "Anita.nandi-ray@kquantaresearch.com",
         "linkedin": "https://www.linkedin.com/in/anitanandi/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
-        "name": "Ambassador Name 4", 
-        "role": "Program Chair", 
-        "city": "Mumbai", 
-        "image": "team4.jpg",
-        "email": "ambassador4@example.com",
-        "linkedin": "https://linkedin.com/in/ambassador4"
+        "name": "Barkha Jain", 
+        "role": "International Speaker and Community Lead", 
+        "city": "Pune", 
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Barkha%20Jain.jpeg",
+        "email": "barkhajain15sep@gmail.com",
+        "linkedin": " https://www.linkedin.com/in/jbarkha/"
     },
     {
-        "name": "Ambassador Name 5", 
-        "role": "Communications Lead", 
-        "city": "Pune", 
-        "image": "team5.jpg",
-        "email": "ambassador5@example.com",
-        "linkedin": "https://linkedin.com/in/ambassador5"
+        "name": "Prof.(Dr.)Pariza Kamboj", 
+        "role": "Professor at Sarvajanik College of Engineering and Technology(SCET), Surat", 
+        "city": "Surat", 
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Pariza%20Kamboj.jpeg",
+        "email": "pariza.kamboj@scet.ac.in",
+        "linkedin": "https://www.linkedin.com/in/prof-dr-pariza-kamboj-37617616/"
     },
 ]
 
