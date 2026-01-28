@@ -23,7 +23,7 @@ TEAM = [
         "role": "Final Year CSE Student at SCET Surat", 
         "city": "Surat", 
         "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Hetvi%20Patel.png",
-        "email": "hetvi1655@example.com",
+        "email": "hetvi1655@gmail.com",
         "linkedin": "https://www.linkedin.com/in/hetvi-patel-5a6467275/"
     },
     {
