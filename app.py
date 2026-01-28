@@ -65,7 +65,7 @@ SPEAKERS = [
         "name": "Urvashi Kapoor",
         "title": "Head of AI, Tech Corp",
         "topic": "Generative AI in Healthcare",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Urvashi%20Kapoor.jpeg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Urvashi%20Kapoor.jpg"
     },
     {
         "name": "Sarah Johnson",
