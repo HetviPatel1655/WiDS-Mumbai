@@ -63,8 +63,8 @@ TEAM = [
 SPEAKERS = [
     {
         "name": "Urvashi Kapoor",
-        "title": "Head of AI, Tech Corp",
-        "topic": "Generative AI in Healthcare",
+        "title": "Senior Editor & AGM at Jagran New Media",
+        "topic": "The AI Safety Blueprint: Preventing Online Scams through Ethical and Responsible Use of AI",
         "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Urvashi%20Kapoor.jpg"
     },
     {
