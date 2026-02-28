@@ -21,7 +21,7 @@ SPONSORS = [
     {
         "name": "Rizvi Institute of Management & Research (RIMSR)",
         "role": "Venue Partner",
-        "image": "Rizvi LOGO.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/RIMSR%20Logo.png",
         "description": "Our esteemed host partner for WiDS Mumbai 2026."
     }
 ]
@@ -57,9 +57,9 @@ TEAM = [
         "name": "Prof.(Dr.) Dhatri Pandya", 
         "role": "Professor at Sarvajanik College of Engineering and Technology(SCET), Surat", 
         "city": "Surat", 
-        "image": "https://ui-avatars.com/api/?name=Dhatri+Pandya&background=random",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Dhatri%20Pandya.jpeg",
         "email": "dhatri.pandya@scet.ac.in",
-        "linkedin": "#"
+        "linkedin": "https://www.linkedin.com/in/dr-dhatri-pandya-a76569a8/"
     },
     {
         "name": "Prof.(Dr.)Pariza Kamboj", 
