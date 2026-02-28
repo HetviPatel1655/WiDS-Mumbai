@@ -21,7 +21,7 @@ SPONSORS = [
     {
         "name": "Rizvi Institute of Management & Research (RIMSR)",
         "role": "Venue Partner",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Rizvi%20LOGO.png",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Rizvi%20LOGO.jpeg",
         "description": "Our esteemed host partner for WiDS Mumbai 2026."
     }
 ]

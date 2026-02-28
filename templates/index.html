@@ -114,11 +114,6 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Brand -->
             <div class="flex items-center gap-3">
-                <div
-                    class="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-sm border border-gray-200">
-                    <img src="https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/WiDS%20logo.png"
-                        alt="WiDS Mumbai Logo" class="w-full h-full object-contain p-1">
-                </div>
                 <div class="leading-tight">
                     <div class="font-bold text-wids-purple text-lg">WiDS Mumbai</div>
                     <div class="text-xs text-slate-500 font-medium tracking-wide">INDIA CONFERENCE</div>
@@ -165,7 +160,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="relative bg-gradient-to-br from-wids-purple via-[#3f2253] to-wids-purple text-white pt-12 pb-20 md:pt-14 md:pb-24 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-wids-purple via-[#3f2253] to-wids-purple text-white py-8 md:py-10 min-h-[calc(100vh-82px)] flex items-center overflow-hidden">
         <!-- Abstract Background Shapes -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2 float-soft">
         </div>
@@ -176,40 +171,41 @@
 
         <div class="container mx-auto px-6 relative z-10 text-center reveal">
             <div
-                class="inline-block -mt-3 md:-mt-4 px-4 py-1 border border-wids-gold/80 bg-white/5 text-wids-gold text-xs font-bold tracking-widest uppercase mb-4 rounded-full backdrop-blur-sm">
+                class="inline-block px-4 py-1 border border-wids-gold/80 bg-white/5 text-wids-gold text-xs font-bold tracking-widest uppercase mb-3 rounded-full backdrop-blur-sm">
                 Western Region Chapter
             </div>
-            <div class="mx-auto mb-6 w-full max-w-[680px] rounded-2xl bg-white/5 border border-white/20 shadow-2xl shadow-black/20 backdrop-blur-sm px-4 py-4 md:px-8 md:py-6">
+            <div class="mx-auto mb-4 w-full max-w-[760px]">
                 <img src="{{ url_for('static', filename='Horizontal Logo.png') }}"
                     alt="WiDS Mumbai Horizontal Conference Logo"
-                    class="w-full h-auto max-h-28 md:max-h-36 object-contain mx-auto"
-                    onerror="this.src='https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Horizontal%20Logo.png'; this.className='w-24 h-24 md:w-28 md:h-28 object-contain mx-auto'; this.parentElement.classList.add('max-w-xs');">
+                    class="w-full h-auto max-h-44 md:max-h-56 object-contain mx-auto"
+                    style="transform: scale(1.5); transform-origin: center;"
+                    onerror="this.src='https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Horizontal%20Logo.png';">
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-3 leading-tight">
                 WiDS India Conference <span class="text-gradient-gold">Mumbai</span>
             </h1>
-            <p class="text-xl md:text-2xl text-purple-200 mb-4 max-w-3xl mx-auto font-light">
+            <p class="text-lg md:text-xl text-purple-200 mb-2 max-w-3xl mx-auto font-light">
             One of three flagship cities hosting WiDS India 2026    
             </p>
-            <p class="text-lg md:text-xl text-purple-300 mb-8 max-w-3xl mx-auto font-light">
+            <p class="text-base md:text-lg text-purple-300 mb-5 max-w-3xl mx-auto font-light">
             Representing the Western India region, with ambassadors from WiDS Mumbai, Pune, and Surat
             </p>
 
-            <div class="flex flex-col md:flex-row justify-center gap-6 mb-8">
+            <div class="flex flex-col md:flex-row justify-center gap-4 mb-5">
                 <div
-                    class="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20 shadow-lg shadow-black/10">
+                    class="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-xl border border-white/20 shadow-lg shadow-black/10">
                     <i data-lucide="calendar" class="w-5 h-5 text-wids-gold"></i>
                     <span class="font-medium">{{ info.date }}</span>
                 </div>
                 <div
-                    class="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20 shadow-lg shadow-black/10">
+                    class="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-xl border border-white/20 shadow-lg shadow-black/10">
                     <i data-lucide="map-pin" class="w-5 h-5 text-wids-gold"></i>
                     <span class="font-medium">{{ info.venue }}</span>
                 </div>
             </div>
 
             <a href="{{ info.registration_link }}" target="_blank"
-                class="inline-flex items-center gap-2 px-8 py-4 bg-wids-gold text-wids-purple font-bold text-lg rounded-xl hover:bg-yellow-400 transition transform hover:-translate-y-1 shadow-2xl shadow-black/15">
+                class="inline-flex items-center gap-2 px-8 py-3 bg-wids-gold text-wids-purple font-bold text-base md:text-lg rounded-xl hover:bg-yellow-400 transition transform hover:-translate-y-1 shadow-2xl shadow-black/15">
                 Register for Conference <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
         </div>
@@ -288,9 +284,9 @@
                     <div
                         class="group bg-white/95 p-10 rounded-2xl shadow-sm border border-slate-100 text-center max-w-lg w-full transition-all duration-500 hover:shadow-2xl hover:border-wids-gold/30 hover:-translate-y-2 hover:shadow-wids-gold/20">
                         {% if sponsor.image %}
-                        <div class="mx-auto mb-6 w-full max-w-md bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+                        <div class="mx-auto mb-6 w-full max-w-md bg-white rounded-xl border border-slate-200 p-3 shadow-sm">
                             <img src="{% if sponsor.image.startswith('http') %}{{ sponsor.image }}{% else %}{{ url_for('static', filename=sponsor.image) }}{% endif %}"
-                            alt="{{ sponsor.name }} logo" class="w-full h-36 object-contain"
+                            alt="{{ sponsor.name }} logo" class="w-full h-52 object-contain"
                                 onerror="this.src='/static/WiDS%20logo.png'">
                         </div>
                         {% else %}
@@ -553,11 +549,11 @@
                     </div>
                     <div class="flex gap-4 mt-6">
                         <!-- Social Icons -->
-                        <a href="#"
+                        <a href="https://www.linkedin.com/in/wids-conference-7731b03b3/"
                             class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-wids-purple hover:text-white transition">
                             <i data-lucide="linkedin" class="w-5 h-5"></i>
                         </a>
-                        <a href="#"
+                        <a href="https://www.instagram.com/wids.mumbai.2026?igsh=NHNhbnBrZmdsN2Y3"
                             class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-wids-purple hover:text-white transition">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
