@@ -12,16 +12,16 @@ EVENT_INFO = {
     "venue": "New Rizvi Education Complex, Mumbai.",
     "description": "WiDS Mumbai 2026 (Women in Data Science Worldwide Conference-2026) is held in association with Rizvi Institute of Management & Research (RIMSR). Representing the Western Region, we bring together data science enthusiasts and leaders.",
     "registration_link": "https://docs.google.com/forms/d/e/1FAIpQLSeg45Skd91dYkGdhle1ycfzV8a3-1xFl-VZlEnKddA4tmIDJw/viewform", 
-    "contact_email": "wids.surat@example.com",
+    "contact_email": "widsmumbaiconference@gmail.com",
     "sponsorship_link": "https://docs.google.com/forms/d/e/1FAIpQLSd-Ai0gRh_59YZ-AGilYZ44B1Ce0vySzbFtAquiXJkF6IU0Fg/viewform?usp=header",
-    "sponsorship_email": "widsmumbaiconference [at] gmail [dot] com"
+    "sponsorship_email": "widsmumbaiconference@gmail.com"
 }
 
 SPONSORS = [
     {
         "name": "Rizvi Institute of Management & Research (RIMSR)",
-        "role": "Host Sponsor",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/WiDS%20logo.png", # Placeholder if logo not available
+        "role": "Venue Partner",
+        "image": "Rizvi LOGO.jpeg",
         "description": "Our esteemed host partner for WiDS Mumbai 2026."
     }
 ]
