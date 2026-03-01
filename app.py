@@ -31,7 +31,7 @@ SPONSORS = [
 TEAM = [
     {
         "name": "Hetvi Patel", 
-        "role": "Final Year CSE Student at SCET Surat", 
+        "role": "Final Year CSE Student at SCET, Surat\nIntern at 10Turtle Global Pvt. Ltd.", 
         "city": "Surat", 
         "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Hetvi%20Patel.png",
         "email": "hetvi1655@gmail.com",
@@ -62,7 +62,7 @@ TEAM = [
         "linkedin": "https://www.linkedin.com/in/dr-dhatri-pandya-a76569a8/"
     },
     {
-        "name": "Prof.(Dr.)Pariza Kamboj", 
+        "name": "Prof.(Dr.) Pariza Kamboj", 
         "role": "Professor at Sarvajanik College of Engineering and Technology(SCET), Surat", 
         "city": "Surat", 
         "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Pariza%20Kamboj.jpeg",
