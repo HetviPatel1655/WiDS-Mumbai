@@ -90,55 +90,55 @@ SPEAKERS = [
         "name": "Urvashi Kapoor",
         "title": "Senior Editor & AGM, Jagran Media",
         "topic": "Preventing Online Scams in the Age of AI: Practical Cyber Safety for Everyday Life",
-        "image": "Speakers/Urvashi Kapoor.jpg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Urvashi%20Kapoor.jpg"
     },
     {
         "name": "Dr. Shariq Nisar",
         "title": "Principal, Rizvi Institute of Management Studies and Research",
         "topic": "Moderator: Future Proofing Careers - Skills, Hiring and Placements in the Age of AI",
-        "image": "Speakers/Dr Shariq Nisar.jpg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Dr%20Shariq%20Nisar.jpg"
     },
     {
         "name": "Ekta Shah",
         "title": "Data Scientist, MSCI",
         "topic": "Panel Discussion: Cybersecurity Risk & Data Privacy",
-        "image": "Speakers/Ekta Shah.jpg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Ekta%20Shah.jpg"
     },
     {
         "name": "Jaanvi Sharma",
         "title": "Founder & Chief Mason, Women Data Protection (WDP) Foundation",
         "topic": "Panel Discussion: Cybersecurity Risk & Data Privacy",
-        "image": "Speakers/Janvi Sharma.jpg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Janvi%20Sharma.jpg"
     },
     {
         "name": "Pradeep Gogte",
         "title": "HR, Rizvi Institute of Management Studies and Research",
         "topic": "Panel Discussion: Future Proofing Careers",
-        "image": "Speakers/Pradeep Gogte.jpg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Pradeep%20Gogte.jpg"
     },
     {
         "name": "Prof. Ajay Singh",
         "title": "Professor of Practice, Entrepreneurship Development & Cybersecurity",
         "topic": "Special Address: Shaping the Future - Emerging Technologies and the Next Generation",
-        "image": "Speakers/Prof. Ajay Singh.jpg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Prof.%20Ajay%20Singh.jpg"
     },
     {
         "name": "Rajesh Save",
         "title": "Impeccker Consulting LLP",
         "topic": "Panel Discussion: Future Proofing Careers",
-        "image": "Speakers/Rajes Save.jpg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Rajes%20Save.jpg"
     },
     {
         "name": "Anita Nandi-Ray",
         "title": "Co-Founder & Policy Director, Kquanta Research",
         "topic": "Moderator: Cybersecurity Risk & Data Privacy",
-        "image": "Anita Nandi.jpeg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Anita%20Nandi.jpeg"
     },
     {
         "name": "Barkha Jain",
         "title": "CMX Connect Chapter",
         "topic": "Featured Talk: Ethics Driven AI - Building for Fairness",
-        "image": "Barkha Jain.jpeg"
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Barkha%20Jain.jpeg"
     }
 ]
 
