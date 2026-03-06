@@ -21,7 +21,7 @@ SPONSORS = [
     {
         "name": "Rizvi Institute of Management & Research (RIMSR)",
         "role": "Venue Partner",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Rizvi%20LOGO.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Rizvi%20Logo.jpeg",
         "description": "Our esteemed host partner for WiDS Mumbai 2026."
     }
 ]
@@ -31,9 +31,9 @@ SPONSORS = [
 TEAM = [
     {
         "name": "Hetvi Patel", 
-        "role": "Final Year CSE Student at SCET, Surat\nIntern at 10Turtle Global Pvt. Ltd.", 
+        "role": "Final Year CSE Student at SCET, Surat\nIntern at 10 Turtle Global Pvt. Ltd.", 
         "city": "Surat", 
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Hetvi%20Patel.png",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Hetvi%20Patel.png",
         "email": "hetvi1655@gmail.com",
         "linkedin": "https://www.linkedin.com/in/hetvi-patel-5a6467275/"
     },
@@ -41,7 +41,7 @@ TEAM = [
         "name": "Anita Nandi-Ray", 
         "role": "Co-founder & Policy Director at Kquanta Research", 
         "city": "Mumbai", 
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Anita%20Nandi.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Anita%20Nandi.jpeg",
         "email": "Anita.nandi-ray@kquantaresearch.com",
         "linkedin": "https://www.linkedin.com/in/anitanandi/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
@@ -49,7 +49,7 @@ TEAM = [
         "name": "Barkha Jain", 
         "role": "International Speaker and Community Lead", 
         "city": "Pune", 
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Barkha%20Jain.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Barkha%20Jain.jpeg",
         "email": "barkhajain15sep@gmail.com",
         "linkedin": "https://www.linkedin.com/in/jbarkha/"
     },
@@ -57,7 +57,7 @@ TEAM = [
         "name": "Prof.(Dr.) Dhatri Pandya", 
         "role": "Professor at Sarvajanik College of Engineering and Technology(SCET), Surat", 
         "city": "Surat", 
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Dhatri%20Pandya.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Dhatri%20Pandya.jpeg",
         "email": "dhatri.pandya@scet.ac.in",
         "linkedin": "https://www.linkedin.com/in/dr-dhatri-pandya-a76569a8/"
     },
@@ -65,7 +65,7 @@ TEAM = [
         "name": "Prof.(Dr.) Pariza Kamboj", 
         "role": "Professor at Sarvajanik College of Engineering and Technology(SCET), Surat", 
         "city": "Surat", 
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Pariza%20Kamboj.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Pariza%20Kamboj.jpeg",
         "email": "pariza.kamboj@scet.ac.in",
         "linkedin": "https://www.linkedin.com/in/prof-dr-pariza-kamboj-37617616/"
     },
@@ -73,7 +73,7 @@ TEAM = [
         "name": "Shradhha Joshi", 
         "role": "Co-Founder & Head Of Marketing at Kquanta Research ", 
         "city": "Mumbai", 
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Shraddha%20Joshi.jpeg",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Shraddha%20Joshi.jpeg",
         "email": "Shraddha.joshi@kquantaresearch.com",
         "linkedin": "https://www.linkedin.com/in/shraddha-joshi-14285461/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     }
@@ -93,7 +93,7 @@ SPEAKERS = [
         "image": "Speakers/Urvashi Kapoor.jpg"
     },
     {
-        "name": "Dr Shariq Nisar",
+        "name": "Dr. Shariq Nisar",
         "title": "Principal, Rizvi Institute of Management Studies and Research",
         "topic": "Moderator: Future Proofing Careers - Skills, Hiring and Placements in the Age of AI",
         "image": "Speakers/Dr Shariq Nisar.jpg"
