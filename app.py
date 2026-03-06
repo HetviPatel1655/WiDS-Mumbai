@@ -8,7 +8,7 @@ app = Flask(__name__)
 EVENT_INFO = {
     "year": "2026",
     "date": "March 14, 2026",
-    "time": "8:30 hrs to 13:30 hrs",
+    "time": "8:30 hrs to 14:00 hrs",
     "venue": "New Rizvi Education Complex, Mumbai.",
     "description": "WiDS Mumbai 2026 (Women in Data Science Worldwide Conference-2026) is held in association with Rizvi Institute of Management & Research (RIMSR). Representing the Western Region, we bring together data science enthusiasts and leaders.",
     "registration_link": "https://luma.com/event/evt-dzgEu4qyi1eSXmM", 
@@ -81,27 +81,79 @@ TEAM = [
 
 SPEAKERS = [
     {
+        "name": "Chisoo Lyons",
+        "title": "Executive Director, WiDS Worldwide",
+        "topic": "Live Stream: Inaugural Remarks",
+        "image": ""
+    },
+    {
         "name": "Urvashi Kapoor",
-        "title": "Senior Editor & AGM at Jagran New Media",
-        "topic": "The AI Safety Blueprint: Preventing Online Scams through Ethical and Responsible Use of AI",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Urvashi%20Kapoor.jpg"
+        "title": "Senior Editor & AGM, Jagran Media",
+        "topic": "Preventing Online Scams in the Age of AI: Practical Cyber Safety for Everyday Life",
+        "image": "Speakers/Urvashi Kapoor.jpg"
+    },
+    {
+        "name": "Dr Shariq Nisar",
+        "title": "Principal, Rizvi Institute of Management Studies and Research",
+        "topic": "Moderator: Future Proofing Careers - Skills, Hiring and Placements in the Age of AI",
+        "image": "Speakers/Dr Shariq Nisar.jpg"
+    },
+    {
+        "name": "Ekta Shah",
+        "title": "Data Scientist, MSCI",
+        "topic": "Panel Discussion: Cybersecurity Risk & Data Privacy",
+        "image": "Speakers/Ekta Shah.jpg"
+    },
+    {
+        "name": "Jaanvi Sharma",
+        "title": "Founder & Chief Mason, Women Data Protection (WDP) Foundation",
+        "topic": "Panel Discussion: Cybersecurity Risk & Data Privacy",
+        "image": "Speakers/Janvi Sharma.jpg"
+    },
+    {
+        "name": "Pradeep Gogte",
+        "title": "HR, Rizvi Institute of Management Studies and Research",
+        "topic": "Panel Discussion: Future Proofing Careers",
+        "image": "Speakers/Pradeep Gogte.jpg"
+    },
+    {
+        "name": "Prof. Ajay Singh",
+        "title": "Professor of Practice, Entrepreneurship Development & Cybersecurity",
+        "topic": "Special Address: Shaping the Future - Emerging Technologies and the Next Generation",
+        "image": "Speakers/Prof. Ajay Singh.jpg"
+    },
+    {
+        "name": "Rajesh Save",
+        "title": "Impeccker Consulting LLP",
+        "topic": "Panel Discussion: Future Proofing Careers",
+        "image": "Speakers/Rajes Save.jpg"
+    },
+    {
+        "name": "Anita Nandi-Ray",
+        "title": "Co-Founder & Policy Director, Kquanta Research",
+        "topic": "Moderator: Cybersecurity Risk & Data Privacy",
+        "image": "Anita Nandi.jpeg"
+    },
+    {
+        "name": "Barkha Jain",
+        "title": "CMX Connect Chapter",
+        "topic": "Featured Talk: Ethics Driven AI - Building for Fairness",
+        "image": "Barkha Jain.jpeg"
     }
 ]
 
 AGENDA = [
-    {"time": "08:30 – 09:00", "event": "Registrations", "speaker": "", "designation": ""},
-    {"time": "09:00 – 09:30", "event": "Live Stream: Inaugural Remarks", "speaker": "", "designation": ""},
-    {"time": "09:30 – 09:40", "event": "Opening Address & Context Setting", "speaker": "", "designation": ""},
-    {"time": "09:40 – 09:50", "event": "Special Address", "speaker": "", "designation": ""},
-    {"time": "09:50 – 10:10", "event": "Keynote: Future of AI & Data for Impact", "speaker": "Focus: Generative AI, responsible innovation, and inclusive AI & analytics", "designation": "Takeaways: Industry demands and ethical considerations"},
-    {"time": "10:10 – 10:35", "event": "Panel: Women Leaders in Tech & STEM", "speaker": "Breaking barriers, Leadership lessons, Building influence", "designation": ""},
-    {"time": "10:35 – 10:55", "event": "Tea Break & Networking", "speaker": "", "designation": ""},
-    {"time": "10:55 – 11:20", "event": "Technology Horizons: AI, Cybersecurity & Quantum Technology", "speaker": "", "designation": ""},
-    {"time": "11:20 – 11:45", "event": "Cybersecurity, Data Privacy & Trust", "speaker": "", "designation": ""},
-    {"time": "11:45 – 12:15", "event": "Rising Voices: Student Journeys in Data & AI", "speaker": "Up to 3 student speakers (subject to registrations)", "designation": ""},
-    {"time": "12:15 – 12:40", "event": "Featured Talk", "speaker": "Topic to be Confirmed", "designation": ""},
-    {"time": "12:40 – 13:00", "event": "Decode Your Career Path: Interactive Quiz", "speaker": "", "designation": ""},
-    {"time": "13:00 – 13:30", "event": "Lunch Break & Networking", "speaker": "", "designation": ""},
+    {"time": "08:30 – 09:00", "event": "Registration", "speaker": "", "designation": ""},
+    {"time": "09:00 – 09:30", "event": "Live Stream: Inaugural Remarks", "speaker": "Chisoo Lyons", "designation": "Executive Director, WiDS Worldwide"},
+    {"time": "09:30 – 09:35", "event": "Context Setting", "speaker": "WiDS Ambassador", "designation": ""},
+    {"time": "09:45 – 10:30", "event": "Panel Discussion: Cybersecurity Risk & Data Privacy", "speaker": "Jaanvi Sharma, Ekta Shah, Anita Nandi-Ray (Moderator)", "designation": "Women Data Protection Foundation | MSCI | Kquanta Research"},
+    {"time": "10:30 – 11:00", "event": "Live Stream: Preventing Online Scams in the Age of AI: Practical Cyber Safety for Everyday Life", "speaker": "Urvashi Kapoor", "designation": "Senior Editor & AGM, Jagran Media"},
+    {"time": "11:00 – 11:30", "event": "Special Address: Shaping the Future - Emerging Technologies and the Next Generation", "speaker": "Prof. Ajay Singh", "designation": "Professor of Practice, Entrepreneurship Development & Cybersecurity"},
+    {"time": "11:30 – 12:00", "event": "Tea Break", "speaker": "", "designation": ""},
+    {"time": "12:00 – 12:15", "event": "Featured Talk: Ethics Driven AI - Building for Fairness", "speaker": "Barkha Jain", "designation": "CMX Connect Chapter"},
+    {"time": "12:15 – 12:50", "event": "Panel Discussion: Future Proofing Careers - Skills, Hiring and Placements in the Age of AI", "speaker": "Rajesh Save, Pradeep Gogte, Dr Shariq Nisar (Moderator)", "designation": "Impeccker Consulting LLP | RIMSR HR | Principal, RIMSR"},
+    {"time": "12:50 – 13:00", "event": "Vote of Thanks", "speaker": "WiDS Ambassador", "designation": ""},
+    {"time": "13:00 – 14:00", "event": "Lunch & Networking", "speaker": "", "designation": ""},
 ]
 
 # -----------------------------------------

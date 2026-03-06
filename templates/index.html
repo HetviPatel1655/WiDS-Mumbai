@@ -85,6 +85,138 @@
             background-image: none !important;
         }
 
+        /* ── Realistic Spiral Notebook Binding — SVG rings ────────────────── */
+
+        .speaker-card-shell {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 0.95rem;
+            align-items: stretch;
+            overflow: hidden;
+        }
+
+        /* Cards at z:10 so spirals can layer above (z:30) and below (z:5) */
+        .speaker-card-main {
+            min-width: 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+        }
+
+        /* ── Shared layer positioning (44px wide strip centred over the gap) ── */
+        .speaker-spiral-back,
+        .speaker-spiral-front {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(50% - 22px);
+            width: 44px;
+            pointer-events: none;
+            /* Fade out any partial rings that bleed in at the top/bottom edges */
+            mask-image: linear-gradient(to bottom,
+                    transparent 0px,
+                    black 20px,
+                    black calc(100% - 20px),
+                    transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom,
+                    transparent 0px,
+                    black 20px,
+                    black calc(100% - 20px),
+                    transparent 100%);
+        }
+
+        /* BACK: bottom arc — sits behind cards (z:5)
+         * 44x32px SVG tile; arc is lower half-ellipse cx=22 cy=19 rx=20 ry=7 */
+        .speaker-spiral-back {
+            z-index: 5;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='32'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%231a1928'/%3E%3Cstop offset='42%25' stop-color='%231a1928'/%3E%3Cstop offset='52%25' stop-color='%23404060'/%3E%3Cstop offset='62%25' stop-color='%231a1928'/%3E%3Cstop offset='100%25' stop-color='%231a1928'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M 2,19 A 20,7 0 0,0 42,19' fill='none' stroke='url(%23bg)' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: repeat-y;
+            background-size: 44px 32px;
+            background-position: 0 12px;
+        }
+
+        /* FRONT: top arc — sits in front of cards (z:30)
+         * Same 44x32px tile; sweep-flag=1 curves the arc UPWARD */
+        .speaker-spiral-front {
+            z-index: 30;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='32'%3E%3Cdefs%3E%3ClinearGradient id='fg' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%231a1928'/%3E%3Cstop offset='38%25' stop-color='%231a1928'/%3E%3Cstop offset='50%25' stop-color='%236666aa'/%3E%3Cstop offset='62%25' stop-color='%231a1928'/%3E%3Cstop offset='100%25' stop-color='%231a1928'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M 2,19 A 20,7 0 0,1 42,19' fill='none' stroke='url(%23fg)' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: repeat-y;
+            background-size: 44px 32px;
+            background-position: 0 12px;
+        }
+
+        .speaker-roll-panel {
+            position: relative;
+            width: 100%;
+            min-height: 100%;
+            border-radius: 1rem;
+            border: 1px solid rgba(248, 176, 0, 0.35);
+            background: linear-gradient(180deg, #fff8e2 0%, #fff2cf 100%);
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+            color: #2a1a2d;
+            opacity: 0;
+            pointer-events: none;
+            transform-origin: left center;
+            transform: perspective(1400px) rotateY(-88deg) scaleX(0.06);
+            transition: transform 700ms cubic-bezier(0.22, 0.61, 0.24, 1), opacity 360ms ease;
+            z-index: 10;
+            /* same level as card-main, between back(5) and front(30) spirals */
+            overflow: visible;
+        }
+
+
+        .speaker-card-shell:hover .speaker-roll-panel,
+        .speaker-card-shell:focus-within .speaker-roll-panel {
+            opacity: 1;
+            transform: perspective(900px) rotateY(0deg) scaleX(1);
+        }
+
+        @media (min-width: 1280px) {
+
+            .speaker-card-shell:nth-child(4n+3) .speaker-card-main,
+            .speaker-card-shell:nth-child(4n+4) .speaker-card-main {
+                order: 2;
+            }
+
+            .speaker-card-shell:nth-child(4n+3) .speaker-roll-panel,
+            .speaker-card-shell:nth-child(4n+4) .speaker-roll-panel {
+                order: 1;
+                transform-origin: right center;
+                transform: perspective(1400px) rotateY(88deg) scaleX(0.06);
+            }
+
+
+            .speaker-card-shell:nth-child(4n+3):hover .speaker-roll-panel,
+            .speaker-card-shell:nth-child(4n+3):focus-within .speaker-roll-panel,
+            .speaker-card-shell:nth-child(4n+4):hover .speaker-roll-panel,
+            .speaker-card-shell:nth-child(4n+4):focus-within .speaker-roll-panel {
+                transform: perspective(900px) rotateY(0deg) scaleX(1);
+            }
+        }
+
+        @media (max-width: 1279px) {
+            .speaker-card-shell {
+                display: block;
+            }
+
+            .speaker-roll-panel {
+                width: 100%;
+                min-height: 0;
+                margin-top: 0.85rem;
+                opacity: 1;
+                pointer-events: auto;
+                transform: none;
+                transition: none;
+                box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
+            }
+
+            .speaker-spiral-back,
+            .speaker-spiral-front {
+                display: none;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation: none !important;
@@ -118,7 +250,8 @@
 
 <body class="text-slate-800 font-sans antialiased selection:bg-wids-light/30 selection:text-wids-purple">
 
-    <div id="scrollProgress" class="fixed top-0 left-0 z-[70] h-1 w-0 bg-wids-gold shadow-[0_0_12px_rgba(248,176,0,0.8)]">
+    <div id="scrollProgress"
+        class="fixed top-0 left-0 z-[70] h-1 w-0 bg-wids-gold shadow-[0_0_12px_rgba(248,176,0,0.8)]">
     </div>
 
     <!-- NAVIGATION -->
@@ -134,26 +267,37 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex gap-8 items-center text-sm font-semibold text-slate-600">
-                <a href="#" class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Home</a>
+                <a href="#"
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Home</a>
                 <a href="https://www.widsworldwide.org/about/" target="_blank"
-                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">About WiDS</a>
-                <a href="#conference" class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">About Conference</a>
-                <a href="#sponsors" class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Sponsors</a>
-                <a href="#speakers" class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Speakers</a>
-                <a href="#agenda" class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Agenda</a>
-                <a href="#team" class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Organizing Team</a>
-                <a href="#contact" class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Contact Us</a>
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">About
+                    WiDS</a>
+                <a href="#conference"
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">About
+                    Conference</a>
+                <a href="#sponsors"
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Sponsors</a>
+                <a href="#speakers"
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Speakers</a>
+                <a href="#agenda"
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Agenda</a>
+                <a href="#team"
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Organizing
+                    Team</a>
+                <a href="#contact"
+                    class="nav-link hover:text-wids-purple transition relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-wids-gold hover:after:w-full after:transition-all">Contact
+                    Us</a>
 
                 <!-- CTA Button -->
                 <a href="{{ info.registration_link }}"
                     class="luma-checkout--button register-gold px-5 py-2.5 rounded-xl transition"
-                    data-luma-action="checkout"
-                    data-luma-event-id="evt-dzgEu4qyi1eSXmM">
+                    data-luma-action="checkout" data-luma-event-id="evt-dzgEu4qyi1eSXmM">
                     Register Now
                 </a>
             </div>
 
-            <button id="menuButton" class="md:hidden w-10 h-10 rounded-lg border border-slate-200 text-slate-700 flex items-center justify-center">
+            <button id="menuButton"
+                class="md:hidden w-10 h-10 rounded-lg border border-slate-200 text-slate-700 flex items-center justify-center">
                 <i data-lucide="menu" class="w-5 h-5"></i>
             </button>
         </div>
@@ -169,16 +313,17 @@
                 <a href="#contact" class="mobile-link">Contact Us</a>
                 <a href="{{ info.registration_link }}"
                     class="luma-checkout--button mt-2 inline-flex justify-center px-4 py-2.5 rounded-lg bg-wids-purple text-white"
-                    data-luma-action="checkout"
-                    data-luma-event-id="evt-dzgEu4qyi1eSXmM">Register Now</a>
+                    data-luma-action="checkout" data-luma-event-id="evt-dzgEu4qyi1eSXmM">Register Now</a>
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="relative bg-gradient-to-br from-wids-purple via-[#3f2253] to-wids-purple text-white py-8 md:py-10 min-h-[calc(100vh-82px)] flex items-center overflow-hidden">
+    <section
+        class="relative bg-gradient-to-br from-wids-purple via-[#3f2253] to-wids-purple text-white py-8 md:py-10 min-h-[calc(100vh-82px)] flex items-center overflow-hidden">
         <!-- Abstract Background Shapes -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2 float-soft">
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2 float-soft">
         </div>
         <div
             class="absolute bottom-0 left-0 w-96 h-96 bg-wids-gold opacity-10 rounded-full translate-y-1/2 -translate-x-1/2 float-soft">
@@ -190,7 +335,8 @@
                 class="inline-block px-4 py-1 border border-wids-gold/80 bg-white/5 text-wids-gold text-xs font-bold tracking-widest uppercase mb-3 rounded-full backdrop-blur-sm">
                 Western Region Chapter
             </div>
-            <div class="mx-auto mb-4 w-full max-w-[900px] flex items-center justify-center gap-4 md:gap-8 -translate-x-2 md:-translate-x-8">
+            <div
+                class="mx-auto mb-4 w-full max-w-[900px] flex items-center justify-center gap-4 md:gap-8 -translate-x-2 md:-translate-x-8">
                 <div class="w-[70%] md:w-[72%]">
                     <img src="{{ url_for('static', filename='Horizontal Logo.png') }}"
                         alt="WiDS Mumbai Horizontal Conference Logo"
@@ -198,8 +344,7 @@
                         onerror="this.src='https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Horizontal%20Logo.png';">
                 </div>
                 <div class="w-[30%] md:w-[28%]">
-                    <img src="{{ url_for('static', filename='Rizvi LOGO.jpeg') }}"
-                        alt="Rizvi Institute Logo"
+                    <img src="{{ url_for('static', filename='Rizvi LOGO.jpeg') }}" alt="Rizvi Institute Logo"
                         class="w-full h-auto max-h-24 md:max-h-36 object-contain mx-auto"
                         onerror="this.src='https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Rizvi%20LOGO.jpeg';">
                 </div>
@@ -208,10 +353,10 @@
                 WiDS India Conference <span class="text-gradient-gold">Mumbai</span>
             </h1>
             <p class="text-lg md:text-xl text-purple-200 mb-2 max-w-3xl mx-auto font-light">
-            One of three flagship cities hosting WiDS India 2026    
+                One of three flagship cities hosting WiDS India 2026
             </p>
             <p class="text-base md:text-lg text-purple-300 mb-5 max-w-3xl mx-auto font-light">
-            Representing the Western India region, with ambassadors from WiDS Mumbai, Pune, and Surat
+                Representing the Western India region, with ambassadors from WiDS Mumbai, Pune, and Surat
             </p>
 
             <div class="flex flex-col md:flex-row justify-center gap-4 mb-5">
@@ -229,18 +374,19 @@
 
             <a href="{{ info.registration_link }}"
                 class="luma-checkout--button register-gold inline-flex items-center gap-2 px-8 py-3 font-bold text-base md:text-lg rounded-xl transition transform hover:-translate-y-1 shadow-2xl shadow-black/15"
-                data-luma-action="checkout"
-                data-luma-event-id="evt-dzgEu4qyi1eSXmM">
+                data-luma-action="checkout" data-luma-event-id="evt-dzgEu4qyi1eSXmM">
                 Register for Conference <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
         </div>
     </section>
 
     <!-- ABOUT CONFERENCE SECTION -->
-    <section id="conference" class="py-24 bg-gradient-to-b from-white via-purple-50/40 to-white relative overflow-hidden">
+    <section id="conference"
+        class="py-24 bg-gradient-to-b from-white via-purple-50/40 to-white relative overflow-hidden">
         <div class="absolute -top-24 -left-24 w-72 h-72 bg-wids-light/10 rounded-full blur-3xl"></div>
         <div class="absolute -bottom-28 right-0 w-80 h-80 bg-wids-gold/10 rounded-full blur-3xl"></div>
-        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-slate-50/80 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-slate-50/80 to-transparent pointer-events-none">
+        </div>
         <div class="container mx-auto px-6 flex flex-col md:flex-row gap-16 items-center reveal">
             <div class="md:w-1/2">
                 <h2 class="text-3xl md:text-4xl font-bold text-wids-purple mb-6">About the Conference</h2>
@@ -254,11 +400,13 @@
                     science leaders from the Western Region to showcase outstanding work by women in the field.
                 </p>
                 <div class="flex gap-4 mt-8">
-                    <div class="px-4 py-2 bg-purple-50 rounded-lg border border-purple-100 shadow-sm border-l-4 border-wids-purple">
+                    <div
+                        class="px-4 py-2 bg-purple-50 rounded-lg border border-purple-100 shadow-sm border-l-4 border-wids-purple">
                         <span class="block font-bold text-wids-purple text-xl">3</span>
                         <span class="text-sm text-slate-600">Cities</span>
                     </div>
-                    <div class="px-4 py-2 bg-purple-50 rounded-lg border border-purple-100 shadow-sm border-l-4 border-wids-purple">
+                    <div
+                        class="px-4 py-2 bg-purple-50 rounded-lg border border-purple-100 shadow-sm border-l-4 border-wids-purple">
                         <span class="block font-bold text-wids-purple text-xl">1</span>
                         <span class="text-sm text-slate-600">Mission</span>
                     </div>
@@ -266,7 +414,8 @@
             </div>
             <div class="md:w-1/2 relative">
                 <!-- Decorative Image Placeholder -->
-                <div class="aspect-video bg-slate-100 rounded-2xl overflow-hidden shadow-2xl relative ring-1 ring-black/5">
+                <div
+                    class="aspect-video bg-slate-100 rounded-2xl overflow-hidden shadow-2xl relative ring-1 ring-black/5">
                     <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                         alt="WiDS Audience" class="object-cover w-full h-full hover:scale-105 transition duration-700">
                     <div class="absolute inset-0 bg-wids-purple/20 mix-blend-multiply"></div>
@@ -277,12 +426,15 @@
 
     <div class="h-16 bg-white relative overflow-hidden">
         <svg viewBox="0 0 1440 120" class="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-            <path fill="#ffffff" d="M0,96L80,90.7C160,85,320,75,480,69.3C640,64,800,64,960,69.3C1120,75,1280,85,1360,90.7L1440,96L1440,121L1360,121C1280,121,1120,121,960,121C800,121,640,121,480,121C320,121,160,121,80,121L0,121Z"></path>
+            <path fill="#ffffff"
+                d="M0,96L80,90.7C160,85,320,75,480,69.3C640,64,800,64,960,69.3C1120,75,1280,85,1360,90.7L1440,96L1440,121L1360,121C1280,121,1120,121,960,121C800,121,640,121,480,121C320,121,160,121,80,121L0,121Z">
+            </path>
         </svg>
     </div>
 
     <!-- SPONSORS SECTION -->
-    <section id="sponsors" class="py-24 bg-gradient-to-br from-wids-purple via-[#3a204e] to-slate-900 relative overflow-hidden text-white">
+    <section id="sponsors"
+        class="py-24 bg-gradient-to-br from-wids-purple via-[#3a204e] to-slate-900 relative overflow-hidden text-white">
         <!-- Subtle Background Decoration -->
         <div
             class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl">
@@ -290,8 +442,10 @@
         <div
             class="absolute bottom-0 left-0 w-64 h-64 bg-wids-gold/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl">
         </div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(248,176,0,0.16),transparent_40%)]"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.09),transparent_35%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(248,176,0,0.16),transparent_40%)]">
+        </div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.09),transparent_35%)]">
+        </div>
 
         <div class="container mx-auto px-6 relative z-10 reveal">
             <div class="text-center mb-16">
@@ -309,13 +463,15 @@
                     <div
                         class="group bg-white/95 p-10 rounded-2xl shadow-sm border border-slate-100 text-center max-w-lg w-full transition-all duration-500 hover:shadow-2xl hover:border-wids-gold/30 hover:-translate-y-2 hover:shadow-wids-gold/20">
                         {% if sponsor.image %}
-                        <div class="mx-auto mb-6 w-full max-w-md bg-white rounded-xl border border-slate-200 p-3 shadow-sm">
+                        <div
+                            class="mx-auto mb-6 w-full max-w-md bg-white rounded-xl border border-slate-200 p-3 shadow-sm">
                             <img src="{% if sponsor.image.startswith('http') %}{{ sponsor.image }}{% else %}{{ url_for('static', filename=sponsor.image) }}{% endif %}"
-                            alt="{{ sponsor.name }} logo" class="w-full h-52 object-contain"
+                                alt="{{ sponsor.name }} logo" class="w-full h-52 object-contain"
                                 onerror="this.src='/static/WiDS%20logo.png'">
                         </div>
                         {% else %}
-                        <div class="w-16 h-16 bg-wids-purple/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div
+                            class="w-16 h-16 bg-wids-purple/5 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i data-lucide="star" class="w-8 h-8 text-wids-gold"></i>
                         </div>
                         {% endif %}
@@ -339,9 +495,11 @@
 
         <div class="container mx-auto px-6 relative z-10 reveal">
             <div class="max-w-4xl mx-auto relative">
-                <div class="absolute inset-0 bg-gradient-to-r from-wids-purple to-wids-light opacity-[0.06] rounded-3xl blur-xl">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-wids-purple to-wids-light opacity-[0.06] rounded-3xl blur-xl">
                 </div>
-                <div class="relative bg-white p-12 rounded-3xl border border-slate-200 shadow-sm text-center ring-1 ring-slate-100">
+                <div
+                    class="relative bg-white p-12 rounded-3xl border border-slate-200 shadow-sm text-center ring-1 ring-slate-100">
                     <div
                         class="inline-flex items-center gap-2 px-3 py-1 bg-wids-gold/10 text-wids-gold text-[10px] font-bold tracking-[0.2em] uppercase rounded-full mb-5 border border-wids-gold/20">
                         <i data-lucide="handshake" class="w-3 h-3"></i> Sponsor Us
@@ -375,7 +533,8 @@
     </section>
 
     <!-- SPEAKERS SECTION -->
-    <section id="speakers" class="py-24 bg-gradient-to-br from-wids-purple via-[#3a204e] to-slate-900 text-white relative overflow-hidden">
+    <section id="speakers"
+        class="py-24 bg-gradient-to-br from-wids-purple via-[#3a204e] to-slate-900 text-white relative overflow-hidden">
         <!-- Background Decoration -->
         <div
             class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/2 -translate-x-1/3 blur-3xl">
@@ -383,7 +542,8 @@
         <div
             class="absolute bottom-0 right-0 w-96 h-96 bg-wids-gold/15 rounded-full translate-y-1/2 translate-x-1/3 blur-3xl">
         </div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(248,176,0,0.16),transparent_40%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(248,176,0,0.16),transparent_40%)]">
+        </div>
 
         <div class="container mx-auto px-6 relative z-10 reveal">
             <div class="text-center mb-16">
@@ -391,20 +551,46 @@
                 <div class="w-24 h-1 bg-wids-gold mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 xl:grid-cols-4 gap-10 xl:gap-6">
                 {% for speaker in speakers %}
-                <div
-                    class="bg-white/95 rounded-2xl border border-white/20 overflow-hidden group hover:border-wids-gold/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                    <div class="h-64 overflow-hidden bg-white/10 relative">
-                        <img src="{% if speaker.image.startswith('http') %}{{ speaker.image }}{% else %}{{ url_for('static', filename=speaker.image) }}{% endif %}"
-                            alt="{{ speaker.name }}"
-                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                            onerror="this.src='https://ui-avatars.com/api/?name={{ speaker.name }}&background=0D8ABC&color=fff'">
+                <div class="speaker-card-shell group xl:col-span-2">
+                    <div
+                        class="speaker-card-main bg-white/95 rounded-2xl border border-white/20 overflow-hidden hover:border-wids-gold/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="h-72 overflow-hidden bg-white/10 relative">
+                            <img src="{% if speaker.image %}{% if speaker.image.startswith('http') %}{{ speaker.image }}{% else %}{{ url_for('static', filename=speaker.image) }}{% endif %}{% else %}https://ui-avatars.com/api/?name={{ speaker.name|default('Speaker') }}&background=0D8ABC&color=fff{% endif %}"
+                                alt="{{ speaker.name|default('Speaker') }}"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                onerror="this.src='https://ui-avatars.com/api/?name=Speaker&background=0D8ABC&color=fff'">
+                            <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/35 to-transparent">
+                            </div>
+                        </div>
+                        <div class="p-5 border-t-4 border-wids-gold">
+                            <h3 class="font-bold text-lg text-slate-800">{{ speaker.name|default('Speaker To Be
+                                Announced') }}</h3>
+                            <p class="text-wids-gold font-semibold text-sm">{{ speaker.title or 'Profile coming soon' }}
+                            </p>
+                        </div>
                     </div>
-                    <div class="p-6 border-t-4 border-wids-gold">
-                        <h3 class="font-bold text-lg text-slate-800">{{ speaker.name }}</h3>
-                        <p class="text-wids-gold font-medium text-sm mb-2">{{ speaker.title }}</p>
-                        <p class="text-slate-500 text-xs uppercase tracking-wide">{{ speaker.topic }}</p>
+
+                    <!-- Spiral back layer (behind cards) -->
+                    <div class="speaker-spiral-back" aria-hidden="true"></div>
+                    <!-- Spiral front layer (in front of cards) -->
+                    <div class="speaker-spiral-front" aria-hidden="true"></div>
+
+                    <div class="speaker-roll-panel" aria-hidden="true">
+                        <div class="p-5">
+                            <div class="text-[10px] font-bold tracking-[0.2em] uppercase text-wids-purple/80 mb-2">
+                                Speaker Brief</div>
+                            <h4 class="font-bold text-base md:text-lg text-wids-purple mb-2">{{
+                                speaker.name|default('Speaker To Be Announced') }}</h4>
+                            <p class="text-[13px] font-semibold text-slate-700 mb-3">{{ speaker.title or 'Profile coming
+                                soon' }}</p>
+                            <div class="h-px w-full bg-wids-gold/50 mb-3"></div>
+                            <p class="text-sm leading-relaxed text-slate-700">{{ speaker.topic or 'Session details to be
+                                announced' }}</p>
+                            <div class="mt-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-wids-purple/70">
+                                Hover Preview Panel</div>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -426,7 +612,9 @@
             </div>
 
             <div class="space-y-0 relative">
-                <div class="hidden md:block absolute left-[31%] top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-wids-gold/40 to-transparent"></div>
+                <div
+                    class="hidden md:block absolute left-[31%] top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-wids-gold/40 to-transparent">
+                </div>
                 {% for item in agenda %}
                 <div class="relative pb-12 grid grid-cols-1 md:grid-cols-12 gap-4 items-center group">
                     <!-- Time -->
@@ -465,7 +653,8 @@
     </section>
 
     <!-- ORGANIZING TEAM -->
-    <section id="team" class="py-24 bg-gradient-to-br from-wids-purple via-[#3a204e] to-wids-purple text-white relative overflow-hidden reveal">
+    <section id="team"
+        class="py-24 bg-gradient-to-br from-wids-purple via-[#3a204e] to-wids-purple text-white relative overflow-hidden reveal">
         <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-wids-gold/5 blur-3xl"></div>
         <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
         <div class="container mx-auto px-6 relative z-10">
@@ -489,7 +678,8 @@
                                     onerror="this.src='https://ui-avatars.com/api/?name={{ member.name }}&background=random'">
                             </div>
                             <h4 class="font-bold text-lg text-center mb-1">{{ member.name }}</h4>
-                            <p class="text-wids-gold text-sm text-center mb-2 px-2 whitespace-pre-line">{{ member.role }}</p>
+                            <p class="text-wids-gold text-sm text-center mb-2 px-2 whitespace-pre-line">{{ member.role
+                                }}</p>
                             <div class="flex justify-center mb-3">
                                 <div
                                     class="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-purple-200 border border-white/10">
@@ -513,7 +703,8 @@
     <!-- TODO: Convert Contact Us into routed support with website & registration owner -->
 
     <!-- CONTACT & FOOTER -->
-    <footer id="contact" class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800 relative overflow-hidden reveal">
+    <footer id="contact"
+        class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800 relative overflow-hidden reveal">
         <div class="absolute -top-20 right-0 w-72 h-72 rounded-full bg-wids-purple/20 blur-3xl"></div>
         <div class="absolute -bottom-20 left-0 w-72 h-72 rounded-full bg-wids-gold/10 blur-3xl"></div>
         <div class="container mx-auto px-6">
@@ -523,9 +714,12 @@
                         WiDS Mumbai Conference 2026
                     </div>
                     <p class="text-sm leading-relaxed">
-                        WiDS Mumbai Conference 2026 is independently organized by WiDS Ambassadors from Mumbai, Surat, and Pune as part of the global Women in Data Science (WiDS) initiative.
+                        WiDS Mumbai Conference 2026 is independently organized by WiDS Ambassadors from Mumbai, Surat,
+                        and Pune as part of the global Women in Data Science (WiDS) initiative.
 
-                        The conference brings together students, professionals, researchers, and industry leaders to share knowledge, explore real-world applications of data science and AI, and strengthen the regional data community.
+                        The conference brings together students, professionals, researchers, and industry leaders to
+                        share knowledge, explore real-world applications of data science and AI, and strengthen the
+                        regional data community.
                     </p>
                 </div>
                 <div>
@@ -536,8 +730,7 @@
                         <li><a href="#conference" class="hover:text-wids-gold transition">About Conference</a></li>
                         <li><a href="#speakers" class="hover:text-wids-gold transition">Speakers</a></li>
                         <li><a href="#team" class="hover:text-wids-gold transition">Team</a></li>
-                        <li><a href="{{ info.registration_link }}"
-                            class="hover:text-wids-gold transition">Register</a>
+                        <li><a href="{{ info.registration_link }}" class="hover:text-wids-gold transition">Register</a>
                         </li>
                     </ul>
                 </div>
