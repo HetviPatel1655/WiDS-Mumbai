@@ -84,7 +84,7 @@ SPEAKERS = [
         "name": "Chisoo Lyons",
         "title": "Executive Director, WiDS Worldwide",
         "topic": "Live Stream: Inaugural Remarks",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Chisoo%20Lyons.png",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/blob/main/static/Speakers/Chisoo%20Lyons.png",
         "bio": "Chisoo Lyons leads Women in Data Science Worldwide, a global non-profit dedicated to advancing women in data science. With strong academic credentials in Industrial Engineering from UC Berkeley and a leadership background driving analytics innovation at FICO, she now guides WiDS programs and global impact initiatives that expand access, opportunity, and community for underrepresented data professionals."
     },
     {
