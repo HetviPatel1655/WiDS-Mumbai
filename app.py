@@ -110,7 +110,7 @@ SPEAKERS = [
     },
     {
         "name": "Nirali Bhatia",
-        "title": "Cyber Psychologist & Psychotherapist | Director - V4WEB | Founder - CyberB.A.A.P.",
+        "title": "Cyber Psychologist & Psychotherapist | Director - V4WEB | Founder - Cyber B.A.A.P.",
         "topic": "Digital Safety Awareness, Mental Wellness, and Responsible Online Behaviour",
         "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Nirali%20Bhatia.jpg",
         "bio": "Nirali Bhatia is a cyber psychologist and user behaviour expert with over two decades of experience studying the intersection of human behaviour and technology. She leads CyberB.A.A.P., India’s pioneering anti-cyberbullying initiative, and works with schools, corporates, and law enforcement to promote safer digital ecosystems. A TEDx speaker and counsellor, she specializes in digital safety awareness, mental wellness, and responsible online behaviour."
@@ -164,8 +164,8 @@ AGENDA = [
     {"time": "09:00 – 09:30", "event": "Live Stream: Inaugural Remarks", "speaker": "Chisoo Lyons", "designation": "Executive Director, WiDS Worldwide"},
     {"time": "09:30 – 09:35", "event": "Context Setting", "speaker": "WiDS Ambassador", "designation": ""},
     {"time": "09:45 – 10:30", "event": "Panel Discussion: Cybersecurity Risk & Data Privacy", 
-     "speaker": ["Jaanvi Sharma", "Ekta Shah", "Anita Nandi-Ray (Moderator)"], 
-     "designation": ["Founder & Chief Mason, Women Data Protection Foundation", "Data Scientist, MSCI", "Co-Founder & Policy Director, Kquanta Research"]},
+        "speaker": ["Jaanvi Sharma", "Ekta Shah", "Nirali Bhatia", "Anita Nandi-Ray (Moderator)"], 
+        "designation": ["Founder & Chief Mason, Women Data Protection Foundation", "Data Scientist, MSCI", "Cyber Psychologist & Psychotherapist | Director - V4WEB | Founder - Cyber B.A.A.P.", "Co-Founder & Policy Director, Kquanta Research"]},
     {"time": "10:30 – 11:00", "event": "Livestream: Preventing Online Scams in the age of AI: Practical Cyber Safety for Everyday life", "speaker": "Urvashi Kapoor", "designation": "Senior Editor & AGM, Jagran Media"},
     {"time": "11:00 – 11:30", "event": "Special Address: Quantum Computing: Preparing for the Next Frontier of Technology", "speaker": "Prof. Ajay Singh", "designation": "Professor of Practice/Author/Fellow Institute of Directors <br> Former CEO/Advisory Board Member"},
     {"time": "11:30 – 12:00", "event": "TEA BREAK", "speaker": "", "designation": ""},

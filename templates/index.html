@@ -242,6 +242,38 @@
                 left: auto;
                 right: 8px;
             }
+
+            /* For an odd final speaker (e.g., 11th), center it in cols 2-3:
+               card in col 2 and unroll panel in col 3. */
+            .speaker-card-shell:last-child:nth-child(odd) {
+                grid-column: 2 / span 2;
+            }
+
+            .speaker-card-shell:last-child:nth-child(odd) .speaker-card-main {
+                order: 1;
+            }
+
+            .speaker-card-shell:last-child:nth-child(odd) .speaker-roll-panel {
+                order: 2;
+                transform-origin: left center;
+                transform: perspective(1400px) rotateY(-88deg) scaleX(0.06);
+            }
+
+            .speaker-card-shell:last-child:nth-child(odd):hover .speaker-roll-panel,
+            .speaker-card-shell:last-child:nth-child(odd):focus-within .speaker-roll-panel {
+                opacity: 1;
+                transform: perspective(900px) rotateY(0deg) scaleX(1);
+            }
+
+            .speaker-card-shell:last-child:nth-child(odd) .speaker-card-main::after {
+                right: 8px;
+                left: auto;
+            }
+
+            .speaker-card-shell:last-child:nth-child(odd) .speaker-roll-panel::before {
+                left: 8px;
+                right: auto;
+            }
         }
 
         @media (max-width: 1279px) {
