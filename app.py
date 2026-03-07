@@ -84,8 +84,8 @@ SPEAKERS = [
         "name": "Chisoo Lyons",
         "title": "Executive Director, WiDS Worldwide",
         "topic": "Live Stream: Inaugural Remarks",
-        "image": "",
-        "bio": ""
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Chisoo%20Lyons.png",
+        "bio": "Chisoo Lyons leads Women in Data Science Worldwide, a global non-profit dedicated to advancing women in data science. With strong academic credentials in Industrial Engineering from UC Berkeley and a leadership background driving analytics innovation at FICO, she now guides WiDS programs and global impact initiatives that expand access, opportunity, and community for underrepresented data professionals."
     },
     {
         "name": "Urvashi Kapoor",
@@ -95,11 +95,11 @@ SPEAKERS = [
         "bio": "Urvashi Kapoor is an award-winning journalist specializing in AI literacy, digital safety, and responsible technology use. She leads large-scale media literacy initiatives at Jagran New Media in collaboration with global organizations including Google and Meta. Through nationwide programs combating misinformation and promoting cyber awareness, she has emerged as a leading voice advancing ethical AI adoption and digital trust."
     },
     {
-        "name": "Dr. Shariq Nisar",
-        "title": "Principal, Rizvi Institute of Management Studies and Research",
-        "topic": "Moderator: Future Proofing Careers - Skills, Hiring and Placements in the Age of AI",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Dr%20Shariq%20Nisar.jpg",
-        "bio": "Dr. Shariq Nisar is an economist and academic specializing in ethical finance and financial inclusion. He has advised leading financial institutions and government bodies while pioneering ethical investment frameworks in India. A globally recognized scholar and former Visiting Fellow at Harvard Law School, he contributes extensively to research, policy dialogue, and international academic forums."
+        "name": "Jaanvi Sharma",
+        "title": "Founder & Chief Mason, Women Data Protection (WDP) Foundation",
+        "topic": "Panel Discussion: Cybersecurity Risk & Data Privacy",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Janvi%20Sharma.jpg",
+        "bio": "Advocate Jaanvi Sharma is a data protection lawyer specializing in global privacy regulations including GDPR and India’s DPDPA. She advises organizations on compliance strategy, privacy governance, and ethical data practices. Through her foundation, she promotes gender inclusion in cybersecurity and mentors aspiring privacy professionals, contributing to stronger and more responsible data governance ecosystems."
     },
     {
         "name": "Ekta Shah",
@@ -109,32 +109,18 @@ SPEAKERS = [
         "bio": "Ekta Shah is a data science professional with expertise in machine learning, artificial intelligence, and advanced analytics. She has hands-on experience across predictive modeling, NLP, reinforcement learning, and large-scale data systems. Passionate about applying analytics to real-world challenges, she also mentors emerging professionals and actively contributes to the data science community."
     },
     {
-        "name": "Jaanvi Sharma",
-        "title": "Founder & Chief Mason, Women Data Protection (WDP) Foundation",
-        "topic": "Panel Discussion: Cybersecurity Risk & Data Privacy",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Janvi%20Sharma.jpg",
-        "bio": "Advocate Jaanvi Sharma is a data protection lawyer specializing in global privacy regulations including GDPR and India’s DPDPA. She advises organizations on compliance strategy, privacy governance, and ethical data practices. Through her foundation, she promotes gender inclusion in cybersecurity and mentors aspiring privacy professionals, contributing to stronger and more responsible data governance ecosystems."
+        "name": "Nirali Bhatia",
+        "title": "Cyber Psychologist & Psychotherapist | Director - V4WEB | Founder - CyberB.A.A.P.",
+        "topic": "Digital Safety Awareness, Mental Wellness, and Responsible Online Behaviour",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Nirali%20Bhatia.jpg",
+        "bio": "Nirali Bhatia is a cyber psychologist and user behaviour expert with over two decades of experience studying the intersection of human behaviour and technology. She leads CyberB.A.A.P., India’s pioneering anti-cyberbullying initiative, and works with schools, corporates, and law enforcement to promote safer digital ecosystems. A TEDx speaker and counsellor, she specializes in digital safety awareness, mental wellness, and responsible online behaviour."
     },
     {
-        "name": "Pradeep Gogte",
-        "title": "HR, Rizvi Institute of Management Studies and Research",
-        "topic": "Panel Discussion: Future Proofing Careers",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Pradeep%20Gogte.jpg",
-        "bio": "Pradeep Gogte is a seasoned HR leader with extensive experience across global corporations, premier academic institutions, and nonprofit organizations. He has led senior roles in talent strategy, corporate relations, and career services. As an academician, he focuses on mentoring future management professionals and strengthening industry readiness through practical human resource education."
-    },
-    {
-        "name": "Prof. Ajay Singh",
-        "title": "Professor of Practice, Entrepreneurship Development & Cybersecurity",
-        "topic": "Special Address: Shaping the Future - Emerging Technologies and the Next Generation",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Prof.%20Ajay%20Singh.jpg",
-        "bio": "Prof. Ajay Singh is a veteran technology leader with 35+ years of experience in IT leadership, fintech innovation, and corporate governance. He has led global technology transformations across banking, telecom, and government sectors. A certified corporate director and academic, his expertise includes cyber risk management, digital governance, cyber forensics, and technology law."
-    },
-    {
-        "name": "Rajesh Save",
-        "title": "Impeccker Consulting LLP",
-        "topic": "Panel Discussion: Future Proofing Careers",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Rajes%20Save.jpg",
-        "bio": "Dr. Rajesh Save brings over three decades of experience spanning behavioral science, psychometrics, human resource strategy, and advanced analytics. He specializes in applying AI and machine learning to workforce transformation and people analytics. His work focuses on building intelligent, data-driven talent systems that help organizations enhance performance and future readiness."
+        "name": "Barkha Jain",
+        "title": "CMX Connect Chapter",
+        "topic": "Featured Talk: Ethics Driven AI - Building for Fairness",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Barkha%20Jain.jpeg",
+        "bio": ""
     },
     {
         "name": "Anita Nandi-Ray",
@@ -144,11 +130,32 @@ SPEAKERS = [
         "bio": ""
     },
     {
-        "name": "Barkha Jain",
-        "title": "CMX Connect Chapter",
-        "topic": "Featured Talk: Ethics Driven AI - Building for Fairness",
-        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Barkha%20Jain.jpeg",
-        "bio": ""
+        "name": "Prof. Ajay Singh",
+        "title": "Professor of Practice, Entrepreneurship Development & Cybersecurity",
+        "topic": "Special Address: Shaping the Future - Emerging Technologies and the Next Generation",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Prof.%20Ajay%20Singh.jpg",
+        "bio": "Prof. Ajay Singh is a veteran technology leader with 35+ years of experience in IT leadership, fintech innovation, and corporate governance. He has led global technology transformations across banking, telecom, and government sectors. A certified corporate director and academic, his expertise includes cyber risk management, digital governance, cyber forensics, and technology law."
+    },
+    {
+        "name": "Pradeep Gogte",
+        "title": "HR, Rizvi Institute of Management Studies and Research",
+        "topic": "Panel Discussion: Future Proofing Careers",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Pradeep%20Gogte.jpg",
+        "bio": "Pradeep Gogte is a seasoned HR leader with extensive experience across global corporations, premier academic institutions, and nonprofit organizations. He has led senior roles in talent strategy, corporate relations, and career services. As an academician, he focuses on mentoring future management professionals and strengthening industry readiness through practical human resource education."
+    },
+    {
+        "name": "Rajesh Save",
+        "title": "Impeccker Consulting LLP",
+        "topic": "Panel Discussion: Future Proofing Careers",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Rajes%20Save.jpg",
+        "bio": "Dr. Rajesh Save brings over three decades of experience spanning behavioral science, psychometrics, human resource strategy, and advanced analytics. He specializes in applying AI and machine learning to workforce transformation and people analytics. His work focuses on building intelligent, data-driven talent systems that help organizations enhance performance and future readiness."
+    },
+    {
+        "name": "Dr. Shariq Nisar",
+        "title": "Principal, Rizvi Institute of Management Studies and Research",
+        "topic": "Moderator: Future Proofing Careers - Skills, Hiring and Placements in the Age of AI",
+        "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Dr%20Shariq%20Nisar.jpg",
+        "bio": "Dr. Shariq Nisar is an economist and academic specializing in ethical finance and financial inclusion. He has advised leading financial institutions and government bodies while pioneering ethical investment frameworks in India. A globally recognized scholar and former Visiting Fellow at Harvard Law School, he contributes extensively to research, policy dialogue, and international academic forums."
     }
 ]
 
