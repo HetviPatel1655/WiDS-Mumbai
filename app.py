@@ -117,7 +117,7 @@ SPEAKERS = [
     },
     {
         "name": "Barkha Jain",
-        "title": "CMX Connect Chapter",
+        "title": "International Speaker and Community Lead",
         "topic": "Featured Talk: Ethics Driven AI - Building for Fairness",
         "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Organizers/Barkha%20Jain.jpeg",
         "bio": ""
@@ -169,7 +169,7 @@ AGENDA = [
     {"time": "10:30 – 11:00", "event": "Livestream: Preventing Online Scams in the age of AI: Practical Cyber Safety for Everyday life", "speaker": "Urvashi Kapoor", "designation": "Senior Editor & AGM, Jagran Media"},
     {"time": "11:00 – 11:30", "event": "Special Address: Quantum Computing: Preparing for the Next Frontier of Technology", "speaker": "Prof. Ajay Singh", "designation": "Professor of Practice/Author/Fellow Institute of Directors <br> Former CEO/Advisory Board Member"},
     {"time": "11:30 – 12:00", "event": "TEA BREAK", "speaker": "", "designation": ""},
-    {"time": "12:00 – 12:15", "event": "Featured Talk: Ethics Driven AI: Building for Fairness", "speaker": "Barkha Jain", "designation": "CMX Connect Chapter"},
+    {"time": "12:00 – 12:15", "event": "Featured Talk: Ethics Driven AI: Building for Fairness", "speaker": "Barkha Jain", "designation": "International Speaker and Community Lead"},
     {"time": "12:15 – 12:50", "event": "Panel Discussion: Future Proofing careers: Skills, Hiring and Placements in the age of AI", 
      "speaker": ["Rajesh Save", "Pradeep Gogte", "Dr Shariq Nisar (Moderator)"], 
      "designation": ["Impeccker Consulting LLP", "HR, Rizvi Institute of Management Studies and Research", "Principal, RIMSR / Former Visiting Fellow, Harvard Law School"]},
