@@ -131,8 +131,8 @@ SPEAKERS = [
     },
     {
         "name": "Prof. Ajay Singh",
-        "title": "Professor of Practice, Entrepreneurship Development & Cybersecurity",
-        "topic": "Special Address: Shaping the Future - Emerging Technologies and the Next Generation",
+        "title": "Professor of Practice/Author/Fellow Institute of Directors \nFormer CEO/Advisory Board Member",
+        "topic": "Quantum Computing: Preparing for the Next Frontier of Technology",
         "image": "https://raw.githubusercontent.com/HetviPatel1655/WiDS-Mumbai/main/static/Speakers/Prof.%20Ajay%20Singh.jpg",
         "bio": "Prof. Ajay Singh is a veteran technology leader with 35+ years of experience in IT leadership, fintech innovation, and corporate governance. He has led global technology transformations across banking, telecom, and government sectors. A certified corporate director and academic, his expertise includes cyber risk management, digital governance, cyber forensics, and technology law."
     },
